@@ -155,8 +155,29 @@ Nevertheless, it does not mean that you need to know how to administrate a serve
 
 ## Containers
 
-Containers are the new (and pivotal) standard for applications deployment. It means that concepts behind virutalization and containerization are needed to be unerstood by a DevOps Engineer. The most popular containerization technology nowadays is Docker. 
+Containers are the new (and pivotal) standard for applications deployment, since they have become the *defacto standard* for application packaging and distribution. It means that concepts behind virutalization and containerization are needed to be unerstood by a DevOps Engineer. The most popular containerization technology nowadays is Docker. 
 
 ## But ... Given Technologies, how to CI/CD?
+Let's see a step-by-step typical process for CI/CD: 
 
-<!-- 2048 -->
+1. ***Test***: when process of writing code is completed (for a bug fix or after the completion of a new feature), it is tested. Tests can be of various nature, and can be written by the same developer or by an ad-hoc team.
+2. **Packaging**: if tests are passed, the appliaction is packed in a file that contains it. It can be a `.jar` file, a `.zip` or anything else, and is strictly dependent by the language used and the various requirements of the project. Here is where ***Build Tools*** and ***Package Managers*** come in, helping to build and pack the application for the future deployment. 
+
+    > [!NOTE]
+    >
+    > There are different Building and Packing tools and they are usually associated with a defined language. Some examples are [Maven](https://maven.apache.org/) or [Gradle](https://gradle.org/) for Java, [npm](https://www.npmjs.com/) for JavaScript, ... 
+
+3. **Containerization**: depending by the project, might be necessary to pack the project in a container, to confine the operation area of the application in a defined space and gain control over it. This is an additional packaging step that takes care not directly of the application itself, but of the environment where it will operate. Typical tools used at this stage are `Docker`, `Kubernetes`, `Podman`, and any containerization software.
+4. **Repository**: the containerization result must then me stocked in an *artifact repository*, i.e., a repository storing all the images built until here for future usage. Usually, images are versioned too, usually following the semantic version tagging `major.minor.patch`. Typical docker image repositories are Nexus, Docker Hub, GitHub Container Registry (or `ghcr`) ...
+
+These 4 steps can be packed into one fully automated pipeline to reduce the human labor and reduce the probability of related human failure. The type of software that can help you in automating the depicted pipeline is a ***Build Automation Tool*** such as [Jenkins](https://www.jenkins.io/). Tools like `Jenkins` need to be connected to other services such as git repositories to work properly.
+
+The resulting pipeline represents the ***Continuous Integration*** step of the software, enabling is ***Continous Deployment*** through the simple pull, download and run of each new container image.
+
+As a DevOps Engineer, you must be able to deploy the complete CI/CD pipeline for your application, which should be, indeed, *continuous*.
+
+<!--TODO: add CI/CD infinite logo-->
+
+## CI/CD and Cloud Technologies
+
+<!-- 2340 -->
