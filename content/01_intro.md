@@ -47,9 +47,9 @@ The continuous iteration between ideas or requirements collections, their implem
 >
 > Making the process of ***continuous-delivery*** of changes ***fast*** and ***reliable*** - i.e., with minimum errors and bugs.
 
-![alt text](../assets/images/image.png)
-
-![alt text](../assets/images/image-1.png)
+<!-- TODO: affianca le immagini -->
+![alt text](../assets/images/ci-cd-infinite-loop-1.png)
+![alt text](../assets/images/ci-cd-infinite-loop-2.png)
 
 ## Developers and Operations: Existing Frictions
 
@@ -129,8 +129,6 @@ Accordingly, in time the DevOps Engineer role became more and more defined, with
 
 > to build a streamlined release process without any kind of issue slowing down the release.
 
-<!-- TODO: immagine delle tecnologie --->
-
 Because of this responsibility, the concept of *Continuous Integration / Continuous Deployment* arose, highlighting the main activities of DevOps Engineers. 
 
 # Tools and Concepts to learn as a DevOps Engineer
@@ -157,6 +155,8 @@ Nevertheless, it does not mean that you need to know how to administrate a serve
 
 Containers are the new (and pivotal) standard for applications deployment, since they have become the *defacto standard* for application packaging and distribution. It means that concepts behind virutalization and containerization are needed to be unerstood by a DevOps Engineer. The most popular containerization technology nowadays is Docker. 
 
+<!-- TODO: Sistema il paragrafo sotto, rompe il flow -->
+
 ## But ... Given Technologies, how to CI/CD?
 Let's see a step-by-step typical process for CI/CD: 
 
@@ -180,4 +180,47 @@ As a DevOps Engineer, you must be able to deploy the complete CI/CD pipeline for
 
 ## CI/CD and Cloud Technologies
 
-<!-- 2340 -->
+Nowadays many companies use virtual infrastructure on the cloud instead of having and manage their own physical infrastructure. Indeed, having a physical infrastructure to manage means: 
+- Selecting the hardware
+- Keep the hardware up-to-date physically and digitally, with updates of various type
+- Setup a workflow
+- Guarantee the reliability of the hardware - in terms of backups, uptime and redundancy
+- Guarantee the security of the hardware
+- Manage the life-cycle of the hardware in every aspect - operatively, administratively, etc
+
+Having the infrastructure running on the cloud, instead, gives to companies the opportunity to off-load most of these painful aspects, letting the team focusing only on the valuable aspect of their business, and levereaging the cloud elasticity to pay only what the team actually uses. 
+
+## Container Orchestration
+
+Most of the time, any deployed application will run in a Docker container. Few Docker containers can be managed easily using `docker-compose`, but it could be not enough at the growth of the number of containers. 
+
+The most popular option is `Kubernetes`. As a DevOps enginner, you will need the ability to manage the cluster and deploy containerized applications using it. 
+
+Having hundreads of containers and/or thousands of `K8` running of hundreads of servers, tracking applications and infrastructure performance is key. To this regard, setting up performance monitoring services is very important, to track the user-experience quality level under the performance lens, and the infrastructure performance too. Typical tools in this area are `Prometheus`, or `Nagios`. 
+
+## Infrastructure-as-a-Code
+
+A `Development` environment to develop the code is not enough. Indeed, is also needed a `Testing` environment to *test* the code, and a `Production` environment to ship the result to the final user.
+
+Implementing and maintaining manually one of these environments takes a lot of time, and multiplying the effort 3 times is not smart. 
+
+Nevertheless, is possible to automate the creation and maintanance of these environments combining 2 types IaaC tools: 
+
+1. Infrastructure provisioning tools, like `Terraform`;
+2. Configuration management tools, like `Ansible`, `Chef` or `Puppet`. 
+
+In this way, your environment is ***more efficient***, ***transparent*** and ***easy to replicate or recover***.
+
+## Scripting Language
+
+Working closely between developers and sys-admins means automating some minor tasks for them, like backups, system monitoring, cron-jobs, network management, and so on. 
+
+To do that can be useful knowing a scripting language. There are many of them, and some can be OS specific, like **Bash** (Linux, MacOS) or **PowerShell** (Windows), or non-OS specific, like ***Python***, **Ruby** or **Go**.
+
+## Version Control
+
+Most of these automation logics are written as-a-code (IaaC), and it means that every chunk of code can be managed... exactly as any other piece of code!
+
+To this regard, version control tools are useful, and is therefore necessary to know `git`.
+
+<!-- TODO: Ristruttura sezione "Tools and Concepts to learn as a DevOps Engineer"  per sistemare il flow della spiegazione --->
