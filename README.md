@@ -1,7 +1,6 @@
 # Intro to CI/CD
- A gentle introduction to CI/CD and concepts behind it.
+ A gentle introduction to CI/CD with GitHub Actions, and concepts behind it.
 
-<!-- TODO: Aggiorna TOC con nuove sezioni -->
 ## Table Of Contents
 The outline of the course is as follows. 
 - [Introduction to Devops](sections/01_intro.md)
@@ -27,7 +26,6 @@ The outline of the course is as follows.
         - [Version Control](sections/01_intro.md#version-control)
         - [But ... Given the Technologies, how to CI/CD?](sections/01_intro.md#but--given-the-technologies-how-to-cicd)
         
-
 - [GitHub Actions](sections/02_gh-actions.md)
     - [Intro to GH Actions](sections/02_gh-actions.md#introduction-to-github-actions)
     - [Developer Workflows and Automation Needs](sections/02_gh-actions.md#developer-workflows-and-automation-needs)
