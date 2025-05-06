@@ -1,4 +1,4 @@
-### 5. Hands-On Demo: Configuring a CI Pipeline for a Java Gradle Project
+# Hands-On Demo: Configuring a CI Pipeline for a Java Gradle Project
 
 The demo presented in the video shows how to set up a basic CI pipeline for a Java project that uses Gradle as the build system.
 
@@ -200,7 +200,7 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
 13. **Operating System Choice:** The `runs-on` attribute can specify different operating systems provided by GitHub: `ubuntu-latest`, `windows-latest`, `macos-latest`. You can use a **strategy (strategy) and a matrix (matrix)** to run the same job on multiple operating systems or with different configurations (e.g., different versions of Java). More information [here](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow).
 
-### 6. Extending the CI Pipeline: some additional steps, building and pushing the Docker Image
+# Extending the CI Pipeline: some additional steps, building and pushing the Docker Image
 
 - The result of the building process using Gradle is a `.jar` artifact. Such artifact must be return by the workflow. To do it, let's add the following code in the `.yaml` file: 
 
@@ -305,7 +305,7 @@ Now that the building step is enriched with some additional steps, we can dig on
 
     ![alt text](../assets/images/gh-19.png)
 
-### 7. Resulting Workflow
+# Resulting Workflow
 
 In the following the resulting workflow, represented in our `.yaml` file, is reported:
 
@@ -367,7 +367,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 ```
 
-### 8. Conclusions and Further Possibilities
+# Conclusions and Further Possibilities
 
 We have seen how GitHub Actions is a powerful and flexible tool for automating not only basic CI pipelines for building and testing applications, but also for extending these pipelines to include containerization with Docker and publishing images to private registries.
 

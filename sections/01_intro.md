@@ -100,7 +100,7 @@ Several times testers are different people from developers. They test specific f
 
 In a traditional setup, these tests are carried out manually, and they need to be executed very carefully because are the first filter for bugs. Of course, this step slows down the releasing process. 
 
-### Manual Work Frictions
+### Manual Work Friction
 
 Many of the tasks needed during the release process used to be done manually. For example operations used to do most of their activities manually either by directly executing commands on the servers to install tools, configure stuff, do patches or have scripts or small programs they execute. This manual work is slow and error prone because of human error. 
 
@@ -114,7 +114,7 @@ The goal of DevOps activities is to remove all mentioned frictions and alleviate
 
 Tools to achieve the target mainly rely on process automations, to lower the manual labour and, consequently, limit error prone activities. As a consequence, activities can be streamlined and releasing cycle can become tighter and tighter, with an optimization level that can support releasing a software multiple times a day 
 
-# How DevOps achieves its Targets
+### How DevOps achieves its Targets
 
 DevOps defines a combination of cultural philosophies, practices and tools for streamlining software development and its distribution.
 
@@ -155,28 +155,13 @@ Nevertheless, it does not mean that you need to know how to administrate a serve
 
 Containers are the new (and pivotal) standard for applications deployment, since they have become the *defacto standard* for application packaging and distribution. It means that concepts behind virutalization and containerization are needed to be unerstood by a DevOps Engineer. The most popular containerization technology nowadays is Docker. 
 
-<!-- TODO: Sistema il paragrafo sotto, rompe il flow -->
+## Container Orchestration
 
-## But ... Given Technologies, how to CI/CD?
-Let's see a step-by-step typical process for CI/CD: 
+Most of the time, any deployed application will run in a Docker container. Few Docker containers can be managed easily using `docker-compose`, but it could be not enough at the growth of the number of containers. 
 
-1. ***Test***: when process of writing code is completed (for a bug fix or after the completion of a new feature), it is tested. Tests can be of various nature, and can be written by the same developer or by an ad-hoc team.
-2. **Packaging**: if tests are passed, the appliaction is packed in a file that contains it. It can be a `.jar` file, a `.zip` or anything else, and is strictly dependent by the language used and the various requirements of the project. Here is where ***Build Tools*** and ***Package Managers*** come in, helping to build and pack the application for the future deployment. 
+The most popular option is `Kubernetes`. As a DevOps enginner, you will need the ability to manage the cluster and deploy containerized applications using it. 
 
-    > [!NOTE]
-    >
-    > There are different Building and Packing tools and they are usually associated with a defined language. Some examples are [Maven](https://maven.apache.org/) or [Gradle](https://gradle.org/) for Java, [npm](https://www.npmjs.com/) for JavaScript, ... 
-
-3. **Containerization**: depending by the project, might be necessary to pack the project in a container, to confine the operation area of the application in a defined space and gain control over it. This is an additional packaging step that takes care not directly of the application itself, but of the environment where it will operate. Typical tools used at this stage are `Docker`, `Kubernetes`, `Podman`, and any containerization software.
-4. **Repository**: the containerization result must then me stocked in an *artifact repository*, i.e., a repository storing all the images built until here for future usage. Usually, images are versioned too, usually following the semantic version tagging `major.minor.patch`. Typical docker image repositories are Nexus, Docker Hub, GitHub Container Registry (or `ghcr`) ...
-
-These 4 steps can be packed into one fully automated pipeline to reduce the human labor and reduce the probability of related human failure. The type of software that can help you in automating the depicted pipeline is a ***Build Automation Tool*** such as [Jenkins](https://www.jenkins.io/). Tools like `Jenkins` need to be connected to other services such as git repositories to work properly.
-
-The resulting pipeline represents the ***Continuous Integration*** step of the software, enabling is ***Continous Deployment*** through the simple pull, download and run of each new container image.
-
-As a DevOps Engineer, you must be able to deploy the complete CI/CD pipeline for your application, which should be, indeed, *continuous*.
-
-<!--TODO: add CI/CD infinite logo-->
+Having hundreads of containers and/or thousands of `K8` running of hundreads of servers, tracking applications and infrastructure performance is key. To this regard, setting up performance monitoring services is very important, to track the user-experience quality level under the performance lens, and the infrastructure performance too. Typical tools in this area are `Prometheus`, or `Nagios`. 
 
 ## CI/CD and Cloud Technologies
 
@@ -189,14 +174,6 @@ Nowadays many companies use virtual infrastructure on the cloud instead of havin
 - Manage the life-cycle of the hardware in every aspect - operatively, administratively, etc
 
 Having the infrastructure running on the cloud, instead, gives to companies the opportunity to off-load most of these painful aspects, letting the team focusing only on the valuable aspect of their business, and levereaging the cloud elasticity to pay only what the team actually uses. 
-
-## Container Orchestration
-
-Most of the time, any deployed application will run in a Docker container. Few Docker containers can be managed easily using `docker-compose`, but it could be not enough at the growth of the number of containers. 
-
-The most popular option is `Kubernetes`. As a DevOps enginner, you will need the ability to manage the cluster and deploy containerized applications using it. 
-
-Having hundreads of containers and/or thousands of `K8` running of hundreads of servers, tracking applications and infrastructure performance is key. To this regard, setting up performance monitoring services is very important, to track the user-experience quality level under the performance lens, and the infrastructure performance too. Typical tools in this area are `Prometheus`, or `Nagios`. 
 
 ## Infrastructure-as-a-Code
 
@@ -223,4 +200,22 @@ Most of these automation logics are written as-a-code (IaaC), and it means that 
 
 To this regard, version control tools are useful, and is therefore necessary to know `git`.
 
-<!-- TODO: Ristruttura sezione "Tools and Concepts to learn as a DevOps Engineer"  per sistemare il flow della spiegazione --->
+<!--TODO: add CI/CD infinite logo-->
+## But ... Given the Technologies, how to CI/CD?
+Let's see a step-by-step typical process for CI/CD: 
+
+1. ***Test***: when process of writing code is completed (for a bug fix or after the completion of a new feature), it is tested. Tests can be of various nature, and can be written by the same developer or by an ad-hoc team.
+2. **Packaging**: if tests are passed, the appliaction is packed in a file that contains it. It can be a `.jar` file, a `.zip` or anything else, and is strictly dependent by the language used and the various requirements of the project. Here is where ***Build Tools*** and ***Package Managers*** come in, helping to build and pack the application for the future deployment. 
+
+    > [!NOTE]
+    >
+    > There are different Building and Packing tools and they are usually associated with a defined language. Some examples are [Maven](https://maven.apache.org/) or [Gradle](https://gradle.org/) for Java, [npm](https://www.npmjs.com/) for JavaScript, ... 
+
+3. **Containerization**: depending by the project, might be necessary to pack the project in a container, to confine the operation area of the application in a defined space and gain control over it. This is an additional packaging step that takes care not directly of the application itself, but of the environment where it will operate. Typical tools used at this stage are `Docker`, `Kubernetes`, `Podman`, and any containerization software.
+4. **Repository**: the containerization result must then me stocked in an *artifact repository*, i.e., a repository storing all the images built until here for future usage. Usually, images are versioned too, usually following the semantic version tagging `major.minor.patch`. Typical docker image repositories are Nexus, Docker Hub, GitHub Container Registry (or `ghcr`) ...
+
+These 4 steps can be packed into one fully automated pipeline to reduce the human labor and reduce the probability of related human failure. The type of software that can help you in automating the depicted pipeline is a ***Build Automation Tool*** such as [Jenkins](https://www.jenkins.io/). Tools like `Jenkins` need to be connected to other services such as git repositories to work properly.
+
+The resulting pipeline represents the ***Continuous Integration*** step of the software, enabling is ***Continous Deployment*** through the simple pull, download and run of each new container image.
+
+As a DevOps Engineer, you must be able to deploy the complete CI/CD pipeline for your application, which should be, indeed, *continuous*.
