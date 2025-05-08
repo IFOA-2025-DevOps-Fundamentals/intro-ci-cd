@@ -4,7 +4,7 @@
 
 The primary goal of GitHub Actions is to **reduce the manual, repetitive, and potentially error-prone tasks** that development teams face on a daily basis. By automating these tasks, developers can focus more on programming and developing new features.
 
-# Developer Workflows and Automation Needs
+## Developer Workflows and Automation Needs
 
 Developer workflows include all the activities that a team or individual developer performs during the software lifecycle. In particular, for **open source projects hosted on GitHub**, maintainers have to manage numerous **organizational activities**, including:
 
@@ -19,7 +19,7 @@ These activities, especially in large projects with many contributors, can becom
 * **Improve quality:** Standardize processes and reduce human errors.
 * **Free up resources:** Allow developers to focus on development.
 
-# GitHub Actions Basics
+## GitHub Actions Basics
 
 GitHub Actions automates workflows through the interaction of three key concepts: 
 1. **Events** 
@@ -51,7 +51,7 @@ Automating GH-Actions flows means:
 
 The workflow can run one or a multiple actions, in chains. The chain of actions is what builds a defined workflow. 
 
-# CI/CD Pipeline with GitHub Actions
+## CI/CD Pipeline with GitHub Actions
 
 One of the most common workflows that are automated with GitHub Actions is the **Continuous Integration and Continuous Delivery (CI/CD)** pipeline.
 

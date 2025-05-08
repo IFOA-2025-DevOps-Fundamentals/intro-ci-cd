@@ -131,31 +131,31 @@ Accordingly, in time the DevOps Engineer role became more and more defined, with
 
 Because of this responsibility, the concept of *Continuous Integration / Continuous Deployment* arose, highlighting the main activities of DevOps Engineers. 
 
-# Tools and Concepts to learn as a DevOps Engineer
+## Tools and Concepts to Learn as a DevOps Engineer
 
-## Development
+### Development
 
 Being a DevOps Engineer means working side-by-side with software developers. Developers teams develop an applications with different kind of stacks and languages, with the final development result collected in a ***code repository***.
 
 One of the most used code repositories used nowadays is `git`. As a DevOps Engineer you will not develop the core of the application, but you need to know: how the developers work, which git workflow they are using, how the application is configured to talk with other applications or databases, how automated tests are configurated and used, and so on. 
 
-## Operating Systems
+### Operating Systems
 
 The developed code need to be deployed (most of the times) on a server, so that users can access it. Consequently, an infrastructure to host the development result is needed, on-premise or in cloud. 
 
 As a DevOps Engineer you need to prepare the infrastructure to run the application, which means you will need to interact with the most used OS in the server domain: Linux. Moreover, you will need to use the CLI, because most of the stuff is done in that way with Linux, and understand the Linux filesystem, and so on.
 
-## Network and Security
+### Network and Security
 
 Deploying an application means also dealing with network and related stuff. Network and networking activities are central in systems security, so, as a DevOps Engineer, you will need to know firewalls, proxy servers, load balancers, HTTP/HTTPS, letting application accessible from outside, IPs, DNSs, and so on. 
 
 Nevertheless, it does not mean that you need to know how to administrate a server from start to finish, such as a Network and System Administratorse, or a Security Engineer: only a basic knowledge is necessary, to be able to interact with the whole infrastructure in the best way possible to deploy your target application. 
 
-## Containers
+### Containers
 
 Containers are the new (and pivotal) standard for applications deployment, since they have become the *defacto standard* for application packaging and distribution. It means that concepts behind virutalization and containerization are needed to be unerstood by a DevOps Engineer. The most popular containerization technology nowadays is Docker. 
 
-## Container Orchestration
+### Container Orchestration
 
 Most of the time, any deployed application will run in a Docker container. Few Docker containers can be managed easily using `docker-compose`, but it could be not enough at the growth of the number of containers. 
 
@@ -163,7 +163,7 @@ The most popular option is `Kubernetes`. As a DevOps enginner, you will need the
 
 Having hundreads of containers and/or thousands of `K8` running of hundreads of servers, tracking applications and infrastructure performance is key. To this regard, setting up performance monitoring services is very important, to track the user-experience quality level under the performance lens, and the infrastructure performance too. Typical tools in this area are `Prometheus`, or `Nagios`. 
 
-## CI/CD and Cloud Technologies
+### CI/CD and Cloud Technologies
 
 Nowadays many companies use virtual infrastructure on the cloud instead of having and manage their own physical infrastructure. Indeed, having a physical infrastructure to manage means: 
 - Selecting the hardware
@@ -175,7 +175,7 @@ Nowadays many companies use virtual infrastructure on the cloud instead of havin
 
 Having the infrastructure running on the cloud, instead, gives to companies the opportunity to off-load most of these painful aspects, letting the team focusing only on the valuable aspect of their business, and levereaging the cloud elasticity to pay only what the team actually uses. 
 
-## Infrastructure-as-a-Code
+### Infrastructure-as-a-Code
 
 A `Development` environment to develop the code is not enough. Indeed, is also needed a `Testing` environment to *test* the code, and a `Production` environment to ship the result to the final user.
 
@@ -188,20 +188,20 @@ Nevertheless, is possible to automate the creation and maintanance of these envi
 
 In this way, your environment is ***more efficient***, ***transparent*** and ***easy to replicate or recover***.
 
-## Scripting Language
+### Scripting Language
 
 Working closely between developers and sys-admins means automating some minor tasks for them, like backups, system monitoring, cron-jobs, network management, and so on. 
 
 To do that can be useful knowing a scripting language. There are many of them, and some can be OS specific, like **Bash** (Linux, MacOS) or **PowerShell** (Windows), or non-OS specific, like ***Python***, **Ruby** or **Go**.
 
-## Version Control
+### Version Control
 
 Most of these automation logics are written as-a-code (IaaC), and it means that every chunk of code can be managed... exactly as any other piece of code!
 
 To this regard, version control tools are useful, and is therefore necessary to know `git`.
 
 <!--TODO: add CI/CD infinite logo-->
-## But ... Given the Technologies, how to CI/CD?
+### But ... Given the Technologies, how to CI/CD?
 Let's see a step-by-step typical process for CI/CD: 
 
 1. ***Test***: when process of writing code is completed (for a bug fix or after the completion of a new feature), it is tested. Tests can be of various nature, and can be written by the same developer or by an ad-hoc team.
