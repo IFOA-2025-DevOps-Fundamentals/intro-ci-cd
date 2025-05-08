@@ -76,5 +76,6 @@ gradle-app.setting
 # End of https://www.toptal.com/developers/gitignore/api/gradle,java,visualstudiocode
 
 ### My Ignore ###
+!assets/zips/*
 to-improve.txt
 ci.yml
