@@ -6,8 +6,19 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
 1. **Creating a Repository:** Create a new repository and give it a proper name (e.g., `gh-actions-intro`). Then insert in the repository the codebase distributed in the `.zip` file.
 
-    ![alt text](../assets/images/gh-1.png)
-    ![alt text](../assets/images/gh-2.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-1.png" width="600"/>
+      <img src="../assets/images/gh-2.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Steps to create a new repository.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 2. **Push Local Code:** The code of a local Java Gradle application is uploaded to the remote repository.
 
@@ -17,24 +28,77 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
     What is important, is to have the repository with the codebase available and ready to be modified and synced. 
 
-    ![alt text](../assets/images/gh-9.png)
+    <div align="center">
+      <img src="../assets/images/gh-9.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Resulting repository overview.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 3. **Accessing the "Actions" Tab:** On the main repository page, select the **"Actions"** tab.
 
-    ![alt text](../assets/images/gh-3.png) <!--TODO: Sistema lo screen -->
+    <div align="center">
+      <img src="../assets/images/gh-3.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Navigate to "Actions".</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 4. **Exploring Workflow Templates:** In the "Actions" section, several workflow templates are shown, grouped by category (Deployment, Continuous Integration, Build and test, Publish, etc.).
 
-    ![alt text](../assets/images/gh-10.png)
-    ![alt text](../assets/images/gh-11.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-10.png" width="600"/>
+      <img src="../assets/images/gh-11.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Some workflow templates.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 5. **Selecting the "Java with Gradle" Template:** The specific template for Java projects that use Gradle is chosen.
+    
+    
+    <div align="center">
+      <img src="../assets/images/gh-12.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Select the "Java with Gradle" template.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
 
-    ![alt text](../assets/images/gh-12.png)
 
 6. **Viewing and Editing the Workflow File (YAML):** When you select the template, GitHub automatically creates a pre-compiled YAML file in the `.github/workflows` directory (for example, with the name `gradle.yml`). This file contains the workflow logic.
 
-    ![alt text](../assets/images/gh-13.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-13.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Pre-compiled workflow YAML file.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
     Note: is also possible to create the relative folder in your local repository, prepare the `.yaml` file, and then sync it with the remote repository.
 
@@ -185,14 +249,36 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
 8. **Commit Workflow File:** The YAML file is committed to the repository.
 
-    ![alt text](../assets/images/gh-14.png)
-    ![alt text](../assets/images/gh-15.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-14.png" width="600"/>
+      <img src="../assets/images/gh-15.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Committing the YAML to the repository.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 9. **Workflow Triggers:** By creating a new branch, making changes and opening a pull request to the `master` branch, the `pull_request` event defined in the YAML file is triggered and the workflow starts executing. It is also possible to trigger the workflow directly with a push to the `master` branch.
 
 10. **Execution Monitoring:** In the "Actions" tab, you can view the workflow execution status (in progress, completed, failed) and the details of each step (log, executed commands).
 
-    ![alt text](../assets/images/gh-16.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-16.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Workflow execution monitoring.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 11. **Execution Environment:** Workflows on GitHub Actions run on **servers managed by GitHub**. You do not need to configure or maintain your own servers. For each *job within a workflow*, a new virtual server is **prepared**.
 
@@ -214,8 +300,19 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
     The artifact will be available in the summary page of the workflow result
 
-    ![alt text](../assets/images/gh-17.png)
-    ![alt text](../assets/images/gh-18.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-17.png" width="600"/>
+      <img src="../assets/images/gh-18.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Download of the Java artifact.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
     
 - An additional check that can enhance the workflow is a check about the existance of the java built file on the host machine. To do it, add the following code in the `.yaml` file: 
 
@@ -234,7 +331,18 @@ Now that the building step is enriched with some additional steps, we can dig on
 
     The account has a free tier, with the possibility of creating one private docker-repository. Create it, as it will be useful in the next steps.
 
-    ![alt text](../assets/images/gh-22.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-22.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Docker Hub repositories overview.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 2. **Adding a Step to Build and Push Docker Image:** the new step will take care of building the docker image, following the instructions present in the `Dockerfile` present in the repository. 
 
@@ -269,8 +377,19 @@ Now that the building step is enriched with some additional steps, we can dig on
 
 5. **Credential Management with GitHub Secrets:** To avoid storing sensitive credentials directly in the YAML file, **GitHub Secrets** can be used. Secrets can be created in the repository settings (Settings -> Secrets -> Actions) with specific names (for example, `DOCKER_USERNAME` and `DOCKER_PASSWORD`).
 
-    ![alt text](../assets/images/gh-20.png)
-    ![alt text](../assets/images/gh-21.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-20.png" width="600"/>
+      <img src="../assets/images/gh-21.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>GH credential management for Docker Hub access.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 6. **Referencing Secrets in the Workflow:** In the YAML file, credentials are referenced using the syntax `secrets.<name_of_secret>` (for example, `secrets.DOCKER_USERNAME`).
 
@@ -303,7 +422,18 @@ Now that the building step is enriched with some additional steps, we can dig on
 
     The `docker/build-push-action` action adds a tag to the Docker image that includes the branch name by default. You can customize the tag using the `tags` parameter of the action.
 
-    ![alt text](../assets/images/gh-19.png)
+
+    <div align="center">
+      <img src="../assets/images/gh-19.png" width="600"/>
+    </div>
+    <div align="center">
+        <figcaption>
+            <em>Docker Hub repository result after the pushing of the GH Workflow.</em>
+            <br>
+            <br>
+        </figcaption>
+    </div>
+
 
 ## Resulting Workflow
 

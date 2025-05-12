@@ -47,9 +47,19 @@ The continuous iteration between ideas or requirements collections, their implem
 >
 > Making the process of ***continuous-delivery*** of changes ***fast*** and ***reliable*** - i.e., with minimum errors and bugs.
 
-<!-- TODO: affianca le immagini -->
-![alt text](../assets/images/ci-cd-infinite-loop-1.png)
-![alt text](../assets/images/ci-cd-infinite-loop-2.png)
+
+<div align="center">
+    <img src="../assets/images/ci-cd-infinite-loop-1.png" width="400"/>
+    <img src="../assets/images/ci-cd-infinite-loop-2.png" width="400"/>
+</div>
+<div align="center">
+    <figcaption>
+        <em>CI/CD visual representations.</em>
+        <br>
+        <br>
+    </figcaption>
+</div>
+
 
 ## Developers and Operations: Existing Frictions
 
@@ -58,7 +68,7 @@ Developers are responsible for coding. Operations are responsible for running th
 ### Miscommunication Friction
 
 Typical issues developers and operations might face are: 
-<!-- TODO: trasforma in tabella-->
+<!-- TODO: transform in table-->
 Typical issues developers might face are: 
 - I cannot run the application a I wrote;
 - They code the application without knowing where the application will be deployed.
@@ -79,7 +89,7 @@ Back in the days, indeed, the process was not clearly defined nor automated, but
 
 The different nature of the two roles is also stressed by the target of their jobs. Indeed: 
 
-<!-- TODO: tabella -->
+<!-- TODO: transform in table -->
 - Developers want to add and release new features *fast*;
 - Operations want to maintain system stability, limiting failures and keeping the application available.
 
@@ -88,7 +98,7 @@ Because of the two different focuses, they have different incentives. As a conse
 Considering also the difficulties for operations in evaluating code they did not write, is possible to understand that the struggle in keeping the process both fast and reliable can easily become real. 
 
 Despite the high level goal for both roles is delivering high level application to the end user fast apparently pushing them to collaborate, job incentives and goals work on the opposite side: developers incentives is to quickly deliver new features, while operations incentives is to maintain system stability and resist to new changes pushed out.
-<!-- TODO: tabella-->
+<!-- TODO: transform in table-->
 
 ### Security Friction
 
@@ -200,8 +210,8 @@ Most of these automation logics are written as-a-code (IaaC), and it means that 
 
 To this regard, version control tools are useful, and is therefore necessary to know `git`.
 
-<!--TODO: add CI/CD infinite logo-->
 ### But ... Given the Technologies, how to CI/CD?
+
 Let's see a step-by-step typical process for CI/CD: 
 
 1. ***Test***: when process of writing code is completed (for a bug fix or after the completion of a new feature), it is tested. Tests can be of various nature, and can be written by the same developer or by an ad-hoc team.
