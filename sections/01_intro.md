@@ -41,7 +41,7 @@ Moreover, during the development and deployment of the application usually possi
 
 > ... How are usually changes tracked? 
 
-The continuous iteration between ideas or requirements collection, their implementation, deployment and monitoring of and application is at the core of DevOps acitivities.
+The continuous iteration between ideas or requirements collection, their implementation, deployment and monitoring of an application, is at the core of DevOps acitivities.
 
 > [!NOTE]
 >
