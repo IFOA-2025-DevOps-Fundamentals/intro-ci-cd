@@ -1,6 +1,6 @@
 # Introduction to GitHub Actions
 
-**GitHub Actions is a platform for automating software developer workflows**. Contrary to popular belief, it is not just another CI/CD (Continuous Integration/Continuous Delivery) tool. CI/CD is just one of many workflows you can automate with GitHub Actions.
+**GitHub Actions is a platform for automating software development workflows**. Contrary to popular belief, it is not just another CI/CD (Continuous Integration/Continuous Delivery) tool. CI/CD is just one of many workflows you can automate with GitHub Actions.
 
 The primary goal of GitHub Actions is to **reduce the manual, repetitive, and potentially error-prone tasks** that development teams face on a daily basis. By automating these tasks, developers can focus more on programming and developing new features.
 
