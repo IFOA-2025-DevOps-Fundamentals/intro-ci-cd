@@ -37,7 +37,7 @@ By the way, the process do not end here; indeed, while in use:
 - it is necessary to track users issues and discovered bugs; 
 - more in general, it is necessary to track accessibility of the application and fix emerging problems. 
 
-Moreover, during the development and deployment of the application usually possible improvements may arise in terms of features or optimizations, letting the steps from 1 to 6 previously seen repeat, indefinitely. Once an improvement, is ready ... is necessary to deliver it to the user *immediately*!
+Moreover, during the development and deployment of the application usually possible improvements may arise in terms of features or optimizations, letting the steps from 1 to 6 previously seen repeat, indefinitely. Once an improvement, is ready ... it is necessary to deliver it to the user *immediately*!
 
 > ... How are usually changes tracked? 
 
