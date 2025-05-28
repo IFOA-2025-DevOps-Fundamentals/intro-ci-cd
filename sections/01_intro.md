@@ -6,7 +6,7 @@
 - What are tasks and responsibilities of DevOps as a role? 
 - What are the differences between DevOps and SRE? 
 
-DevOps is a quiet a new concept gaining growing popularity from around the 2008. The term itself is very broad, posing some difficulties in clearly define what is it about.  
+DevOps is quiet a new concept gaining growing popularity from around the 2008. The term itself is very broad, posing some difficulties in clearly define what is it about.  
 
 The simplest way to define what is DevOps is starting just from the name: it is an intersection fo the words "Development" and "Operations": 
 - **Development:** the phase of designing, and running the application; 
