@@ -33,9 +33,9 @@ Typical software release process can be summarized with the following schema:
 6. Announcement to your end-users of the release of the application (or of a new version of it).
 
 By the way, the process do not end here; indeed, while in use: 
-- is necessary to monitor the application performance; 
-- is necessary to track users issues and discovered bugs; 
-- more in general, is necessary to track accessibility of the application and fix emerging problems. 
+- it is necessary to monitor the application performance; 
+- it is necessary to track users issues and discovered bugs; 
+- more in general, it is necessary to track accessibility of the application and fix emerging problems. 
 
 Moreover, during the development and deployment of the application usually possible improvements may arise in terms of features or optimizations, letting the steps from 1 to 6 previously seen repeat, indefinitely. Once an improvement, is ready ... is necessary to deliver it to the user *immediately*!
 
