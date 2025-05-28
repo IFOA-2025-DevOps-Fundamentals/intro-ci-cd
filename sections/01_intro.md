@@ -69,7 +69,6 @@ Developers are responsible for coding. Operations are responsible for running th
 
 Typical issues developers and operations might face are: 
 <!-- TODO: transform in table-->
-Typical issues developers might face are: 
 - I cannot run the application a I wrote;
 - They code the application without knowing where the application will be deployed.
 
