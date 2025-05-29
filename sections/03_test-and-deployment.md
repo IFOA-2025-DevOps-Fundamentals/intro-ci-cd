@@ -126,23 +126,23 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
         - `job_name`: this key specifies the name of the job it is goind to define. The name is specified as a key under the `jobs` upper-level key. In this case the `job_name` is "*build*".
 
-        - `runs-on`: specifies the machine where the workflow will run. The destination machine can be a `gh-hosted-runner`, a `large-runner`, or a `self-hosted-runner`. More info here. <!-- TODO: add link -->
+        - `runs-on`: specifies the machine where the workflow will run. The destination machine can be a `gh-hosted-runner`, a `large-runner`, or a `self-hosted-runner`. More info [here](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners) and [here](https://docs.github.com/en/actions/hosting-your-own-runners).
             
-                For gh-hosted-runners, billings exist. They vary with respect the [usage time](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates), and the specs specified in this section. 
+            For gh-hosted-runners, billings exist. They vary with respect the [usage time](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates), and the specs specified in this section. 
+        
+            Available options ***for public repositories*** are: 
             
-                Available options ***for public repositories*** are: 
-                
-                - Linux (x64, arm64)
-                - Windows (x64, arm64)
-                - MacOS (intel, arm64)
+            - Linux (x64, arm64)
+            - Windows (x64, arm64)
+            - MacOS (intel, arm64)
 
-                Available options ***for private repositories*** are: 
-                
-                - Linux (x64)
-                - Windows (x64)
-                - MacOS (intel, arm64)
+            Available options ***for private repositories*** are: 
+            
+            - Linux (x64)
+            - Windows (x64)
+            - MacOS (intel, arm64)
 
-                A [free tier](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#included-storage-and-minutes) of 500MB of storage and 2000 minutes per month of `GH-Actions` activities exists.
+            A [free tier](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#included-storage-and-minutes) of 500MB of storage and 2000 minutes per month of `GH-Actions` activities exists.
             
         - `permissions`: this key specifies the level of permissions the actual workflow has when it runs. 
             > [!NOTE]
