@@ -120,7 +120,7 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
         >
         > Pay attention to the name of the branch triggering the event: it may be `master` or `main`!
 
-        A complete list of events is present here. <!-- TODO: add link -->
+        A complete list of events is present [here](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows).
 
     - `jobs`: this section specifies all the actions that are executed when one of the events occurs. One or more `jobs` can be specified
 
