@@ -163,7 +163,7 @@ The demo presented in the video shows how to set up a basic CI pipeline for a Ja
 
         - `steps`: this section specifies the chain of actions to be executed for the given workflow. Each action is specified by the keyword `uses`, that specifies an "***action***" to be used in that particular step.
 
-            - `uses: actions/checkout@v4`: the first action usually specified is the standard action `actions/checkout@v4`. This action takes the code of your repository, and makes it available on the runner machine speciied at the key `runs-on`. 
+            - `uses: actions/checkout@v4`: the first action usually specified is the standard action `actions/checkout@v4`. This action takes the code of your repository, and makes it available on the runner machine specified at the key `runs-on`. 
                 > [!NOTE] <!--TODO: look if the callout tag fits the section -->
                 >
                 > Why is it called *checkout*? The term comes from the cash registers. In this case, the meaning is that the automation tools "taking with him" a specific version of the code to use or modify.
